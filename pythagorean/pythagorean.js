@@ -12,7 +12,7 @@ var result = input.map(function(pair) {
     
     return Math.sqrt(product);
 });
-    
+
 console.log(result[0] === 5);
 console.log(result[1] === 13);
 console.log(result[2] === 17);

@@ -11,6 +11,8 @@ function actionWhenFound(index) {
   console.log("Found Waldo at index " + index + "!");
 }
 
+findWaldo(["ALice", "Bob", "Waldo", "Windston"], actionWhenFound());
+
 // refactored
 function findWaldo(arr, found) {
   
@@ -22,3 +24,4 @@ function findWaldo(arr, found) {
 findWaldo(["Alice", "Bob", "Waldo", "Winston"], function(name, index) {
   console.log("Good news! We Found " + name + " at index " + index + "!");
 });
+
