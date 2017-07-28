@@ -14,13 +14,11 @@ function actionWhenFound(index) {
 // refactored
 function findWaldo(arr, found) {
   
-    arr.forEach(function(name, i) {
-        if (name == "Waldo") { found(i)}
+    arr.forEach(function(name, index) {
+        if (name == "Waldo") { found(name, index)}
     });
 }
 
-function actionWhenFound(index) {
-  console.log("Found Waldo at index " + index + "!");
-}
-
-findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
+findWaldo(["Alice", "Bob", "Waldo", "Winston"], function(name, index) {
+  console.log("Good news! We Found " + name + " at index " + index + "!");
+});
